@@ -10,7 +10,6 @@ host: 0.0.0.0
 show_dir_listing: false
 
 markdown: kramdown
-theme: minima
 gems:
   - jekyll-feed
 exclude:
