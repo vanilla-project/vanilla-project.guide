@@ -1,0 +1,32 @@
+ul.directory-structure {
+  border: 1px solid $dark-color-4;
+  border-radius: 5px;
+  padding: 0;
+
+  li {
+    border-bottom: 1px solid $dark-color-4;
+    line-height: 2;
+    list-style-type: none;
+    padding-left: 30px;
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+
+  li.directory {
+    background-image: url(/assets/icons.svg#directory);
+    background-repeat: no-repeat;
+    background-size: auto 16px;
+    background-position: .5rem .5rem;
+  }
+
+  li.file {
+    background-image: url(/assets/icons.svg#file);
+    background-repeat: no-repeat;
+    background-size: auto 16px;
+    background-position: .5rem .5rem;
+  }
+
+}
+

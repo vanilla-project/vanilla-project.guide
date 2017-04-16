@@ -36,3 +36,14 @@ There's support for **bold**, <u>underscored</u> and _italic_ text.
 2. with more items
 3. item item item
 
+
+### Directory Listings
+
+<ul class="directory-structure">
+  <li class="directory">lib</li>
+  <li class="directory">spec</li>
+  <li class="file">Gemfile</li>
+  <li class="file">Gemfile.lock</li>
+  <li class="file">main.rb</li>
+</ul>
+
