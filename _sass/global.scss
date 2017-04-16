@@ -14,6 +14,7 @@ body {
   font-family: $font-family;
   font-weight: 400;
   line-height:1.6;
+  padding: .5rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,6 +61,10 @@ table {
   th:first-child, td:first-child {
     padding-left: 0px;
   }
+}
+
+p {
+  margin-top: 0;
 }
 
 pre, blockquote, dl, figure, table, p, ul, ol, form {

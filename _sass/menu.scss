@@ -1,0 +1,110 @@
+body > header {
+  text-align: center;
+
+  .show-menu {
+    display: none;
+  }
+
+  .show-menu:checked ~ .menu-icon {
+    border-bottom: 4px solid transparent;
+    transition: border-bottom 0.8s ease-in-out;
+    -webkit-transition: border-bottom 0.8s ease-in-out;
+
+    &:before {
+      transform: rotate(-405deg) translateY(1px) translateX(-3px);
+      -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+      transition: transform 0.5s ease-in-out;
+      -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    }
+
+    &:after {
+      transform: rotate(405deg) translateY(-4px) translateX(-5px);
+      -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+      transition: transform 0.5s ease-in-out;
+      -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    }
+  }
+
+  .menu-icon {
+    display: inline-block;
+    cursor: pointer;
+
+    border-bottom: 4px solid $dark-color-1;
+    width: 30px;
+
+    &::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      border-bottom: 4px solid $dark-color-1;
+      width: 100%;
+      margin-bottom: 5px;
+      transition: transform 0.5s ease-in-out;
+      -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      border-bottom: 4px solid $dark-color-1;
+      width: 100%;
+      margin-bottom: 5px;
+      transition: transform 0.5s ease-in-out;
+      -webkit-transition: -webkit-transform 0.5s ease-in-out;
+    }
+  }
+
+  $navigation__transition: max-height 0.5s ease-in-out;
+
+  nav {
+    margin-bottom: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: $navigation__transition;
+
+    ul {
+      padding: 0;
+      margin: 0;
+
+      li {
+        list-style-type: none;
+
+        a {
+          display: block;
+          line-height: 2.5;
+        }
+      }
+    }
+  }
+
+  .show-menu:checked ~ nav {
+    max-height: 500px;
+    transition: $navigation__transition;
+  }
+
+  @media (min-width: $desktop-size) {
+    .show-menu, .menu-icon {
+      display: none;
+    }
+
+    nav {
+      max-height: none;
+      overflow: auto;
+      transition: none;
+
+      ul {
+        display: flex;
+        flex-wrap: nowrap;
+
+        li {
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}
+

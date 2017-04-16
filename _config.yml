@@ -3,7 +3,6 @@ description: >
   How do I start a project in a new language?
 baseurl: ""
 url: "https://new-language.guide"
-github_username:  new-language
 
 port: 8080
 host: 0.0.0.0

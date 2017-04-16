@@ -1,0 +1,9 @@
+a {
+  color: $dark-color-1;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover, a:active {
+  color: $bright-color-3;
+}
