@@ -1,6 +1,9 @@
 ---
-# You don't need to edit this file, it's empty on purpose.
-# Edit theme's home layout instead if you wanna make some changes
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 layout: home
 ---
+
+You want to learn a new language? Great!
+
+New-language.guide is there to help you get started!
+Our aim is to provide guides in various languages and different tooling to help you get started with a new environment.
+
