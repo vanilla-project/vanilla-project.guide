@@ -4,7 +4,7 @@ date: 2017-04-09
 ---
 
 Ruby is a powerful dynamically typed, object oriented programming language created by Yukihiro &ldquo;Matz&rdquo; Matsumoto in 1995.
-Its strength is in its almost english sentence reading syntax as well as its flexible and open object oriented system.
+Its strength is in its almost English sentence reading syntax as well as its flexible and open object oriented system.
 
 
 ## Further Material
@@ -18,20 +18,19 @@ Its strength is in its almost english sentence reading syntax as well as its fle
 
 ## Topics, Tools and Terms
 
-Ruby packages are called _gems_, and the tool to install new packages (`gem`) comes with Ruby itself.
-For example we can run `gem install rails` to install Rails on our system.
+Ruby packages are called _gems_, and the tool to install new packages, called (`gem`), comes with the Ruby language distribution itself.
+`gem` lets us run install commands to add packages to our system, for example `gem install rails` will install Rails on our system.
 
 
 ### Dependency Management
 
-Always having to install dependencies by hand becomes tedious and time consuming really fast.
-To help with that a tool called _Bundler_ is available.
-Bundler needs to be installed as a gem: `gem install bundler`.
-This will install Bundler globally and provide the executable `bundle` for us which we're going to use later.
+Having to install dependencies by hand quickly becomes tedious and time consuming.
+Luckily we have a tool called _Bundler_ to help with that; Bundler needs to be installed as a gem: `gem install bundler`.
+This will install Bundler globally with the other gems on our system and provide the executable `bundle` for us which we're going to use later.
 
-Now we have a way to _bundle_ and manage our dependencies in a file called `Gemfile`.
-The content of that file is a list of gems we need for our project.
-An example Gemfile can look as follows:
+Now we have a way to _bundle_ and manage our dependencies in a file called a `Gemfile`.
+The content of that file is a list of gems we need for a given project.
+An example Gemfile looks like this:
 
 {% highlight ruby %}
 source "https://rubygems.org"
