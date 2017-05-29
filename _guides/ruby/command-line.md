@@ -41,20 +41,20 @@ The first line tells Bundler where to look for all gems.
 [Rubygems.org](https://rubygems.org) is a central place where Ruby gems are available.
 The second line adds Rails as a dependency (with version `5.0.2`).
 This is helpful to make sure every developer has the same versions installed on their systems.
-But not only other developers, this is also helpful when we deploy our Ruby applications to a server.
+It is also helpful when we deploy our Ruby applications to a server for the same reason.
 
 To have bundler installing everything needed for us we run `bundle install`.
 This will download all dependencies specified in the `Gemfile`.
 
-Once you start working on more than one Ruby projects a version manager will prove very beneficial.
+
+### Version Managers
+
+Once you start working on more than one Ruby project a version manager will prove very beneficial.
 
 Without a version manager we'd need to always install the currently needed version of Ruby for the project we're working on.
 This isn't so much a problem at the beginning, but once we work on one or two different projects that use different versions of Ruby it's helpful to be able to just switch between versions.
 
 We recommend using a version manager in order to be able to use different ruby versions on your system.
-
-
-### Version Managers
 
 There are several version managers available: RVM, rbenv and chruby to name a couple of popular ones.
 They all solve the same problem and choosing one mostly boils down to personal preference.
