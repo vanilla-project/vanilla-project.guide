@@ -15,3 +15,17 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
+permalink: pretty
+
+collections:
+  guides:
+    output: true
+    permalink: /:path
+
+defaults:
+  - scope:
+      path: ""
+      type: guides
+    values:
+      layout: page
+
