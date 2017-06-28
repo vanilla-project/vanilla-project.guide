@@ -4,6 +4,8 @@ description: >
 baseurl: ""
 url: "https://new-language.guide"
 
+google_analytics: UA-101858487-1
+
 port: 8080
 host: 0.0.0.0
 show_dir_listing: false
@@ -30,4 +32,18 @@ defaults:
       type: guides
     values:
       layout: page
+  - scope:
+      path: "_guides/ruby"
+    values:
+      languages:
+        - Ruby
+        - object-oriented
+        - dynamically-typed
+  - scope:
+      path: "_guides/node"
+    values:
+      languages:
+        - JavaScript
+        - object-oriented
+        - dynamically-typed
 

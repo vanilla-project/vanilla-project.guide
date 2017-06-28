@@ -1,6 +1,8 @@
 ---
-title:  Node.JS Command Line Application
-date: 2017-05-28
+title: Command Line Application
+date:  2017-05-28
+tags:
+  - command-line
 ---
 
 Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine, it was created by Joyent engineer Ryan Dahl.
