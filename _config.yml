@@ -4,6 +4,8 @@ description: >
 baseurl: ""
 url: "https://new-language.guide"
 
+google_analytics: UA-101858487-1
+
 port: 8080
 host: 0.0.0.0
 show_dir_listing: false
