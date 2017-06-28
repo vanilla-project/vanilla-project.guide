@@ -1,4 +1,4 @@
-# new-langauge.guide
+# vanilla-project.guide
 
 ## Run Locally
 

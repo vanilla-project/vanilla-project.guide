@@ -1,8 +1,8 @@
-title: new-language.guide
+title: vanilla-project.guide
 description: >
   How do I start a project in a new language?
 baseurl: ""
-url: "https://new-language.guide"
+url: "https://vanilla-project.guide"
 
 google_analytics: UA-101858487-1
 
@@ -47,5 +47,3 @@ defaults:
         - object-oriented
         - dynamically-typed
 
-
-theme: jekyll-theme-tactile
