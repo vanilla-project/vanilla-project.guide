@@ -1,6 +1,8 @@
 ---
-title:  Ruby Command Line Application
-date: 2017-04-09
+title: Command Line Application
+date:  2017-04-09
+tags:
+  - command-line
 ---
 
 Ruby is a powerful dynamically typed, object oriented programming language created by Yukihiro &ldquo;Matz&rdquo; Matsumoto in 1995.
