@@ -12,8 +12,10 @@ markdown: kramdown
 gems:
   - jekyll-feed
 exclude:
+  - contributing.md
   - Gemfile
   - Gemfile.lock
+  - template.md
 
 permalink: pretty
 
