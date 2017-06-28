@@ -13,7 +13,7 @@ We found we ask ourselves similar questions every time we want to start a projec
 
 This is our attempt to help other people that might face similar struggles.
 
-We do not provide tutorials on how to get started a language itself.
+We do not provide tutorials on how to get started with a language itself.
 There are many great resources out there already in a level of quality we would never be able to achieve.
 So we're linking out to the ones we know.
 If you think we're missing resources worth mentioning please don't hestitate to raise an issue or pull request on our <a href="https://github.com/vanilla-project/vanilla-project.github.io">github repository</a>.
