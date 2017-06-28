@@ -47,3 +47,5 @@ defaults:
         - object-oriented
         - dynamically-typed
 
+
+theme: jekyll-theme-tactile
