@@ -35,16 +35,16 @@ defaults:
   - scope:
       path: "_guides/ruby"
     values:
-      languages:
-        - Ruby
+      language: Ruby
+      paradigms:
         - object-oriented
         - dynamically-typed
       color: "#701516"
   - scope:
       path: "_guides/node"
     values:
-      languages:
-        - JavaScript
+      language: JavaScript
+      paradigms:
         - object-oriented
         - dynamically-typed
       color: "#f1e05a"
