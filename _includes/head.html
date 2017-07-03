@@ -8,10 +8,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
 
+  <link rel="stylesheet" href="{{ "/assets/choices.min.css" | relative_url }}" />
+
   <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" href="{{ "/assets/syntax.css" | relative_url }}" />
   <link rel="stylesheet" href="{{ "/assets/normalize.css" | relative_url }}" />
   <link rel="stylesheet" href="{{ "/assets/vanilla-project.css" | relative_url }}" />
+
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}" />
