@@ -39,6 +39,7 @@ defaults:
         - Ruby
         - object-oriented
         - dynamically-typed
+      color: "#701516"
   - scope:
       path: "_guides/node"
     values:
@@ -46,4 +47,5 @@ defaults:
         - JavaScript
         - object-oriented
         - dynamically-typed
+      color: "#f1e05a"
 
