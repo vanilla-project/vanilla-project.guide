@@ -1,12 +1,24 @@
 $font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-$bright-color-1: #fff;
-$bright-color-2: #c6f473;
-$bright-color-3: #669c03;
-$bright-color-4: #407865;
+$background-color: #F8F8F1;
+$text-color: #222;
+
+$bright-color-1: #A8D878;
+$bright-color-2: #78C090;
+$bright-color-3: #609090;
+$bright-color-4: #603060;
 $dark-color-1: #222;
 $dark-color-2: #666;
 $dark-color-3: #999;
-$dark-color-4: #e1e1e1;
+$dark-color-4: #aaa;
 
 $desktop-size: 801px;
+
+.bright-color-1 { background-color: $bright-color-1; }
+.bright-color-2 { background-color: $bright-color-2; }
+.bright-color-3 { background-color: $bright-color-3; }
+.bright-color-4 { background-color: $bright-color-4; }
+.dark-color-1 { background-color: $dark-color-1; }
+.dark-color-2 { background-color: $dark-color-2; }
+.dark-color-3 { background-color: $dark-color-3; }
+.dark-color-4 { background-color: $dark-color-4; }
