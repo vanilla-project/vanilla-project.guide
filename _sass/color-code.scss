@@ -1,16 +1,9 @@
 body > div.color-code {
+  @include full-width;
+
   border: none;
   border-top: 5px solid;
   border-color: $bright-color-2;
-
-  // These percentages and minus values are to break out of the parent container.
-  // from: https://css-tricks.com/full-width-containers-limited-width-parents
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
   margin-top: -1rem;
-  position: relative;
-  right: 50%;
-  width: 100vw;
 }
 

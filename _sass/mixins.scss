@@ -1,0 +1,16 @@
+@mixin full-width {
+  // These percentages and minus values are to break out of the parent container.
+  // from: https://css-tricks.com/full-width-containers-limited-width-parents
+  left: 50%;
+  margin: 0 -50vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+@mixin undo-full-width {
+  margin: auto;
+  position: inherit;
+  width: auto;
+}
+
