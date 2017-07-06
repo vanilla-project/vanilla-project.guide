@@ -1,9 +1,12 @@
 body > header {
-  padding-top: 1.5rem;
-  padding-bottom: .7rem;
+  @media (min-width: $desktop-size) {
+    & {
+      padding-top: 1rem;
+      padding-bottom: .7rem;
+    }
+  }
 
   nav {
-    margin: 0 auto;
     max-width: 900px;
   }
 }

@@ -1,0 +1,85 @@
+// Hamburger code based on:
+// https://github.com/callmenick/Animating-Hamburger-Icons
+//
+// Updated to use a checkbox instead of JavaScript to
+// identify whether the menu is open or not.
+body > header {
+  label.menu {
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 70px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-indent: -9999px;
+    width: 70px;
+
+    &:focus {
+      outline: none;
+    }
+
+    span {
+      background: #000;
+      display: block;
+      height: 4px;
+      left: 18px;
+      position: absolute;
+      right: 18px;
+      top: 35px;
+      transition: background 0s 0.1s;
+    }
+
+    span::before,
+    span::after {
+      background-color: #000;
+      content: "";
+      display: block;
+      height: 4px;
+      left: 0;
+      transition-duration: 0.2s, 0.2s;
+      transition-delay: 0.2s, 0s;
+      position: absolute;
+      width: 100%;
+    }
+
+    span::before {
+      top: -10px;
+      transition-property: top, transform;
+    }
+
+    span::after {
+      bottom: -10px;
+      transition-property: bottom, transform;
+    }
+
+    @media (min-width: $desktop-size) {
+      & {
+        display: none;
+      }
+    }
+  }
+
+  .show-menu:checked ~ .menu {
+    span {
+      background: none;
+    }
+
+    span::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+
+    span::after {
+      bottom: 0;
+      transform: rotate(-45deg);
+    }
+
+    span::before,
+    span::after {
+      transition-delay: 0s, 0.2s;
+    }
+  }
+}
+
