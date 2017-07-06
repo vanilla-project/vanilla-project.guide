@@ -7,6 +7,7 @@ body > header {
   }
 
   nav {
+    @include undo-full-width;
     max-width: 900px;
   }
 }
