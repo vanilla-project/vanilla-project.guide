@@ -44,7 +44,11 @@ var guides = {
 var routeToLanguageAndTitle = {
 {% capture code_without_whitespaces %}
   {% for guide in site.guides %}
-    "{{guide.url}}": {language: "{{ guide.language }}", title: "{{ guide.title | escape }}"},
+    "{{guide.url}}": {
+      language: "{{ guide.language }}",
+      title: "{{ guide.title | escape }}",
+      icon: "{{ guide.icon }}",
+    },
   {% endfor %}
 {% endcapture %}
 {{ code_without_whitespaces }}
@@ -81,7 +85,13 @@ var SearchResults = function(props) {
 
   for (var i = 0; i < guides.length; i++) {
     var g = routeToLanguageAndTitle[guides[i]];
-    results.push(h(SearchResult, {route: guides[i] + "", language: g.language, title: g.title}));
+    var props = {
+      route: guides[i],
+      language: g.language,
+      title: g.title,
+      icon: g.icon
+    };
+    results.push(h(SearchResult, props));
   }
 
   if (results.length === 0) {
@@ -95,8 +105,9 @@ var SearchResults = function(props) {
 };
 
 var SearchResult = function(props) {
+  var icon = h("img", {src: "{{ "/assets/icons/" | relative_url }}" + props.icon});
   return h("li", {key: props.route},
-      h("a", {href: props.route}, props.language + " " + props.title)
+      h("a", {href: props.route}, icon, props.language + " " + props.title)
     );
 };
 

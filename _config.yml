@@ -36,6 +36,7 @@ defaults:
       path: "_guides/ruby"
     values:
       language: Ruby
+      icon: ruby.png
       paradigms:
         - object-oriented
         - dynamically-typed
@@ -44,6 +45,7 @@ defaults:
       path: "_guides/node"
     values:
       language: JavaScript
+      icon: "js.png"
       paradigms:
         - object-oriented
         - dynamically-typed
