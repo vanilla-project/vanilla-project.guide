@@ -7,8 +7,7 @@ layout: default
 
   {% assign languages = "" | split: "" %}
   {% for guide in site.guides %}
-    {% assign language = guide.languages | first %}
-    {% assign languages = languages | push: language | uniq %}
+    {% assign languages = languages | push: guide.language | uniq %}
   {% endfor %}
 
   <section class="available-guides">
@@ -19,7 +18,7 @@ layout: default
         <h2>{{ language }}</h2>
         <ul>
           {% for guide in site.guides %}
-            {% if guide.languages contains language %}
+            {% if guide.language == language %}
               <li><a href="{{ guide.url | relative_url }}">{{ guide.title | escape }}</a></li>
             {% endif %}
           {% endfor %}
