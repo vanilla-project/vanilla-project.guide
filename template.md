@@ -50,6 +50,11 @@ _Every language has either an expected layout or at least the community agreed o
 </ul>
 
 
+### Naming Conventions
+
+_It helps explaining the conventions for file and directory names (e.g. do the tests live in `test`, `tests`, `spec`, &hellip;?)._
+
+
 ## Tests
 
 _If applicable for the given language and project type we should also explain different testing strategies._
@@ -66,13 +71,17 @@ _Every guide should come with an example repository that has working code to dem
 _Ideally there's a simple unit test available as well to demonstrate how to test with the language._
 
 
-### Run the Application
+### Running the Application
 
 _Provide instructions to run the actual application._
 
 
-### Run the Tests
+### Running the Tests
 
 _Show how to run the tests and if needed explain how different moving parts fit together._
+
+
+#### Testing Approach
+
 _Different testing strategies can be explained, too!_
 
