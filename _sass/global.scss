@@ -105,3 +105,14 @@ pre, blockquote, dl, figure, table, p, ul, ol, form {
 ul > li, li > ul {
   margin-bottom: 0;
 }
+
+ul {
+  padding-left: 1rem;
+
+  @media (min-width: $desktop-size) {
+    & {
+      padding-left: 2rem;
+    }
+  }
+}
+
