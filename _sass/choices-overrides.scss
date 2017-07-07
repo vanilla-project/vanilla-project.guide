@@ -1,0 +1,12 @@
+.choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
+  background-image: url(icons/cross.svg);
+  border-left: 1px solid $dark-color-3;
+}
+
+.choices__list--multiple .choices__item.is-highlighted,
+.choices__list--multiple .choices__item {
+  background-color: $bright-color-4;
+  border-color: $dark-color-3;
+  border-radius: 5px;
+}
+
