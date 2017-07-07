@@ -1,0 +1,9 @@
+body > .color-code {
+  @include full-width;
+
+  border: none;
+  border-top: 5px solid;
+  border-color: $bright-color-2;
+  margin-top: -1rem;
+}
+

@@ -47,3 +47,28 @@ There's support for **bold**, <u>underscored</u> and _italic_ text.
   <li class="file">main.rb</li>
 </ul>
 
+
+### Colors
+
+<div class="bright-color-1">&nbsp;</div>
+<div class="bright-color-2">&nbsp;</div>
+<div class="bright-color-3">&nbsp;</div>
+<div class="bright-color-4">&nbsp;</div>
+<div class="dark-color-1">&nbsp;</div>
+<div class="dark-color-2">&nbsp;</div>
+<div class="dark-color-3">&nbsp;</div>
+<div class="dark-color-4">&nbsp;</div>
+<p></p>
+
+### Code
+
+{% highlight ruby %}
+module Styleguide
+  class Example
+    def everybody_knows
+      p "The bird is the word."
+    end
+  end
+end
+{% endhighlight %}
+

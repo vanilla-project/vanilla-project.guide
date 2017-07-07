@@ -1,6 +1,17 @@
 figure.highlight {
-  margin: 0 0 1.5rem 0;
+  @include full-width;
+
+  background-color: #EEEEE9;
+  border-radius: 5px;
+  margin-bottom: 1.5rem;
   overflow-x: scroll;
+  padding: .5em 1em;
+
+  @media (min-width: $desktop-size) {
+    @include undo-full-width;
+
+    margin-bottom: 1.5rem;
+  }
 
   pre {
     margin: 0;

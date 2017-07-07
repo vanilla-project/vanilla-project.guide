@@ -1,0 +1,14 @@
+body > header {
+  @media (min-width: $desktop-size) {
+    & {
+      padding-top: 1rem;
+      padding-bottom: .7rem;
+    }
+  }
+
+  nav {
+    @include undo-full-width;
+    max-width: 900px;
+  }
+}
+
