@@ -28,7 +28,6 @@ body > header {
   }
 
   .show-menu:checked ~ nav {
-    margin-bottom: 1rem;
     max-height: 500px;
     transition: $navigation__transition;
   }
