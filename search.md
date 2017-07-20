@@ -98,7 +98,7 @@ var SearchResults = function(props) {
     var link = h("a", {href: "https://github.com/vanilla-project/vanilla-project.github.io/issues/new"}, "let us know if you'd like to see a specific guide");
     var br = h("br");
 
-    return h("span", null, "No guides found.", br, "Are we missing something? Please ", link, ".");
+    return h("p", null, "No guides found.", br, "Are we missing something? Please ", link, ".");
   }
 
   return h("ul", null, results);

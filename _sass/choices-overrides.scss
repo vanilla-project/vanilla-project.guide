@@ -10,3 +10,9 @@
   border-radius: 5px;
 }
 
+.choices.is-open {
+  .is-active {
+    position: relative;
+  }
+}
+
