@@ -1,0 +1,23 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - gems-{{ checksum "Gemfile.lock" }}
+            - gems-
+
+      - run: bundle install
+
+      - save_cache:
+          paths:
+            - ./venv
+          key: gems-{{ checksum "Gemfile.lock" }}
+
+      - run: bundle exec jekyll build
+

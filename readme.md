@@ -1,5 +1,7 @@
 # vanilla-project.guide
 
+![Build Status](https://circleci.com/gh/vanilla-project/vanilla-project.github.io/tree/master.svg?style=shield&circle-token=72581d4da0c51739f251af0eeb1569c7e1fd33dd)
+
 This is the repository for https://vanilla-project.guide.
 
 
