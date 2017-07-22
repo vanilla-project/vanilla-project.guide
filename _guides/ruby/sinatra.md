@@ -1,9 +1,20 @@
 ---
 title: Sinatra Application
 date: 2017-07-13
+tags:
+  - web
 ---
 
 Sinatra is a lightweight framework to build web applications with Ruby.
+
+
+## Further Material
+
+- Ruby Homepage: [ruby-lang.org](https://www.ruby-lang.org)
+- Sinatra Homepage: [sinatrarb.com](http://www.sinatrarb.com)
+- Ruby Documentation: [ruby-doc.org](http://ruby-doc.org)
+- Sinatra Book: [sinatra-org-book.herokuapp.com](https://sinatra-org-book.herokuapp.com)
+
 
 {% include_relative overview.md %}
 

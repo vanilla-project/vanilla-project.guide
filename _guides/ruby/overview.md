@@ -1,12 +1,3 @@
-## Further Material
-
-- Homepage: [ruby-lang.org](https://www.ruby-lang.org)
-- Documentation: [ruby-doc.org](http://ruby-doc.org)
-- Try Ruby in your browser: [tryruby.org](http://tryruby.org)
-- Ruby Koans: [rubykoans.com](http://rubykoans.com)
-- Learn Ruby the Hard Way: [learnrubythehardway.org](https://learnrubythehardway.org/book)
-
-
 ## Topics, Tools and Terms
 
 Ruby packages are called _gems_, and the tool to install new packages, called (`gem`), comes with the Ruby language distribution itself.

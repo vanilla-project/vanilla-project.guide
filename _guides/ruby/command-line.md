@@ -8,6 +8,16 @@ tags:
 Ruby is a powerful dynamically typed, object oriented programming language created by Yukihiro &ldquo;Matz&rdquo; Matsumoto in 1995.
 Its strength is in its almost English sentence reading syntax as well as its flexible and open object oriented system.
 
+
+## Further Material
+
+- Homepage: [ruby-lang.org](https://www.ruby-lang.org)
+- Documentation: [ruby-doc.org](http://ruby-doc.org)
+- Try Ruby in your browser: [tryruby.org](http://tryruby.org)
+- Ruby Koans: [rubykoans.com](http://rubykoans.com)
+- Learn Ruby the Hard Way: [learnrubythehardway.org](https://learnrubythehardway.org/book)
+
+
 {% include_relative overview.md %}
 
 
