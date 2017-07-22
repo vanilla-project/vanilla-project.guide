@@ -1,11 +1,4 @@
----
-layout: default
-title: Search
----
-<h1>{{ page.title }}</h1>
-
-<select id="search" placeholder="This is a placeholder" multiple=""></select>
-
+<select id="search" multiple=""></select>
 <article id="search-results"></article>
 
 <script rel="stylesheet" src="{{ "/assets/preact.min.js" | relative_url }}"></script>
@@ -66,7 +59,7 @@ var options = {
   searchFloor: 1,
   duplicateItems: false,
   placeholder: true,
-  placeholderValue: "Start searching for project flavours...",
+  placeholderValue: "Start searching for flavours...",
   removeItemButton: true
 };
 
