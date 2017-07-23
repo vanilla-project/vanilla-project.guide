@@ -7,6 +7,10 @@ jobs:
     steps:
       - checkout
 
+      - run:
+          name: Setup Heroku
+          command: bash .circleci/setup-heroku.sh
+
       - restore_cache:
           keys:
             - gems-{{ checksum "Gemfile.lock" }}
@@ -20,4 +24,8 @@ jobs:
           key: gems-{{ checksum "Gemfile.lock" }}
 
       - run: bundle exec jekyll build
+
+      - run:
+          name: Deploy to Heroku
+          command: git push heroku ${CIRCLE_BRANCH}:master -f
 
