@@ -14,6 +14,7 @@ markdown: kramdown
 gems:
   - jekyll-feed
 exclude:
+  - vendor
   - contributing.md
   - Gemfile
   - Gemfile.lock
