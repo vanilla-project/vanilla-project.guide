@@ -14,6 +14,7 @@ markdown: kramdown
 gems:
   - jekyll-feed
 exclude:
+  - vendor
   - contributing.md
   - Gemfile
   - Gemfile.lock
@@ -24,7 +25,6 @@ permalink: pretty
 collections:
   guides:
     output: true
-    permalink: /:path
 
 defaults:
   - scope:
