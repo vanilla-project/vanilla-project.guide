@@ -50,4 +50,12 @@ defaults:
         - object-oriented
         - dynamically-typed
       color: "#f1e05a"
-
+  - scope:
+      path: "_guides/php"
+    values:
+      language: PHP
+      icon: "php.png"
+      paradigms:
+        - object-oriented
+        - dynamically-typed
+      color: "#8b5af1"
