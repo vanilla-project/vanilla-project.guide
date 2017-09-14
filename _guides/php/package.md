@@ -1,10 +1,10 @@
 ---
-title: PHP Module
+title: PHP Package
 date: 2017-08-13
 tags:
-  - module
   - composer
   - package
+  - packagist
 ---
 
 PHP is a general-purpose server-side scripting language primarily used in web development. Originally created by Rasmus Lerdorf in 1994, it is now by The PHP Development Team.
@@ -113,7 +113,7 @@ Tests match their production code file names with a `Test` suffix, e.g. tests fo
 ## Example Project
 
 
-The repository for the example applications is available at [github.com/vanilla-project/php-module](https://github.com/vanilla-project/php-module).
+The repository for the example applications is available at [github.com/vanilla-project/php-package](https://github.com/vanilla-project/php-package).
 
 The main application consists of basically three files:
 
