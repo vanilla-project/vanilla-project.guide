@@ -105,9 +105,7 @@ For example the class `Vanilla` should be contained in file `Vanilla.php`, the p
 Tests match their production code file names with a `Test` suffix, e.g. tests for code in `src/Vanilla.php` should be written in `test/VanillaTest.php`.
 
 
-
 ## Example Project
-
 
 The repository for the example applications is available at [github.com/vanilla-project/php-command-line](https://github.com/vanilla-project/php-command-line).
 
@@ -115,6 +113,7 @@ The main application consists of basically three files:
 
 - `bin/hello.php` is the main executable that instantiates and runs:
   - `src/Example/Greeting.php` contains the main application.
+
 
 ### Running the Tests
 
@@ -129,9 +128,7 @@ vendor/phpunit/phpunit/phpunit
 
 #### Testing Approach
 
-The first test for the class `Greeting` verifies that the return value of the `sayHello` method contains the name of the person and also contains the initial greeting &ldquo;Good&rdquo;.
-
-The second and third tests uses stubs to override the default behaviour of the `DateTime` class injected into the class' constructor so that we can test the expected return value depending on the time of day.
+The test for class `Greeting` is only verifying the return value of one method.
 
 
 ### Running the Application
