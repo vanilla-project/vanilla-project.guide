@@ -83,15 +83,13 @@ In our guides we will be using PHPUnit as the default testing framework.
 
 ## Directory Structure
 
-A typical directory structure for a PHP project consists of a `src` directory that contains all source files and a `tests` directory that includes all tests. For web applications the publically accessible files (eg. `index.php`) would reside in a `public` directory which would then be your webservers document root.
+A typical directory structure for a PHP project consists of a `src` directory that contains all source files and a `tests` directory that includes all tests. For command-line applications the files to be executed to start your application (eg. `hello.php`) would reside in a `bin` directory.
 
-Another common convention is having a `bin` directory that may contain executable files to start your application.
-
-We provided a working example of a minimal project on [Github](provide URL here).
+We provided a working example of a minimal project on [github.com/vanilla-project/php-command-line](https://github.com/vanilla-project/php-command-line).
 <ul class="directory-structure">
   <li class="directory">src</li>
-  <li class="directory">test</li>
-  <li class="directory">public</li>
+  <li class="directory">tests</li>
+  <li class="directory">bin</li>
   <li class="file">composer.json</li>
   <li class="file">composer.lock</li>
 </ul>
@@ -111,11 +109,11 @@ Tests match their production code file names with a `Test` suffix, e.g. tests fo
 ## Example Project
 
 
-The repository for the example applications is available at [github.com/vanilla-project/php-module](https://github.com/vanilla-project/php-module).
+The repository for the example applications is available at [github.com/vanilla-project/php-command-line](https://github.com/vanilla-project/php-command-line).
 
 The main application consists of basically three files:
 
-- `public/example.php` is the main executable that instantiates and runs:
+- `bin/hello.php` is the main executable that instantiates and runs:
   - `src/Example/Greeting.php` contains the main application.
 
 ### Running the Tests
@@ -126,7 +124,7 @@ All tests can be run by executing
 vendor/phpunit/phpunit/phpunit
 ```
 
-`phpunit` will automatically find all tests inside the `test` directory and run them based on the configuration in the `phpunit.xml` file.
+`phpunit` will automatically find all tests inside the `tests` directory and run them based on the configuration in the `phpunit.xml` file.
 
 
 #### Testing Approach
@@ -138,12 +136,12 @@ The second and third tests uses stubs to override the default behaviour of the `
 
 ### Running the Application
 
-PHP has an in-built server for local development. To run this change into the directory `public` and run
+To run the application execute `bin/hello.php "World"` or `php hello.php "World"`.
+You should see the text &ldquo;Hello World&rdquo; being printed.
 
 ```
-php -S localhost:8000
+$: bin/hello.php "World"
+Hello World
 ```
 
-Then open your browser at `http://localhost:8000/example.php`
-
-You should see the text &ldquo;Good Morning Ada Lovelace&rdquo; being printed (or similar depending on the time of day).
+You should see the text &ldquo;Hello World&rdquo; being printed.
