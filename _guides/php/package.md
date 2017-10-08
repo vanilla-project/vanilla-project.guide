@@ -89,7 +89,7 @@ A typical directory structure for a PHP project consists of a `src` directory th
 
 Another common convention is having a `bin` directory that may contain executable files to start your application.
 
-We provided a working example of a minimal project on [Github](provide URL here).
+We provided a working example of a minimal project on [Github](https://github.com/vanilla-project/php-package).
 <ul class="directory-structure">
   <li class="directory">src</li>
   <li class="directory">test</li>
