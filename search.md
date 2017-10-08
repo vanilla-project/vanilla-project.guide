@@ -18,17 +18,19 @@ title: Search
 
 var guides = {
 {% for guide in site.guides %}
-  {% assign attributes = "" | split: "" %}
+  {% assign attributes = " " | split: " " %}
   {% assign attributes = attributes | push: guide.language %}
   {% for paradigm in guide.paradigms %}
-    {% assign attributes = attributes | push: paradigm %}
+    {% assign escaped_paradigm = paradigm | escape %}
+    {% assign attributes = attributes | push: escaped_paradigm %}
   {% endfor %}
   {% for tag in guide.tags %}
-    {% assign attributes = attributes | push: tag %}
+    {% assign escaped_tag = tag | escape %}
+    {% assign attributes = attributes | push: escaped_tag %}
   {% endfor %}
 
   "{{guide.url}}": [
-    "{{ attributes | escape | join: '","' }}"
+    "{{ attributes | join: '","' }}"
   ],
 
   {% for attribute in attributes %}

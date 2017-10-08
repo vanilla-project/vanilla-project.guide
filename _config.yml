@@ -11,8 +11,9 @@ host: 0.0.0.0
 show_dir_listing: false
 
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
+  - github-pages
 exclude:
   - vendor
   - contributing.md
