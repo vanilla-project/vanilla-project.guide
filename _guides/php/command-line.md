@@ -35,7 +35,7 @@ We can list our dependencies in a `composer.json` file and run `composer install
 
 An example `composer.json` file looks like this:
 
-{% highlight php %}
+{% highlight json %}
 {
     "name": "example-project",
     "require": {
