@@ -15,6 +15,7 @@ plugins:
   - jekyll-feed
   - github-pages
 exclude:
+  - heroku
   - vendor
   - contributing.md
   - Gemfile
@@ -26,6 +27,7 @@ permalink: pretty
 collections:
   guides:
     output: true
+    permalink: /:path/
 
 defaults:
   - scope:
