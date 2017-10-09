@@ -26,6 +26,7 @@ permalink: pretty
 collections:
   guides:
     output: true
+    permalink: /:path/
 
 defaults:
   - scope:
