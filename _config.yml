@@ -15,6 +15,7 @@ plugins:
   - jekyll-feed
   - github-pages
 exclude:
+  - heroku
   - vendor
   - contributing.md
   - Gemfile
