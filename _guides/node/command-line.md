@@ -18,7 +18,7 @@ Node.js uses an event-driven, non-blocking I/O model that makes it lightweight a
 
 ## Topics, Tools and Terms
 
-Node packages are managed through a tool called _npm_. It comes with the Node.js language distribution itself.
+Node packages are managed through Node Package Manager, commonly called just _npm_. It comes with the Node.js language distribution itself.
 `npm` lets us run install commands to add packages to our system, for example `npm install express` will install Express.js on our system.
 
 
@@ -82,7 +82,8 @@ This isn't so much a problem at the beginning, but once we work on one or two di
 
 We recommend using a version manager in order to be able to use different node versions on your system.
 
-The most popular and well maintained version manager available is: NVM.
+The most popular and well maintained version manager available is Node Version
+Manager, NVM.
 
 
 ### Testing Tools
@@ -98,6 +99,8 @@ In our guides we will be using Mocha and Chai as the default testing framework.
 
 
 ## Directory Structure
+
+The repository for the example applications is available at [github.com/vanilla-project/node-command-line](https://github.com/vanilla-project/node-command-line).
 
 A typical directory structure for a node.js command line project consists of a `src` directory that contains all source files and a `test` directory that includes all tests.
 
