@@ -1,6 +1,6 @@
 ---
 title: Maven Command Line Application
-date:  2017-07-23
+date:  2017-10-15
 tags:
   - command-line
   - Maven
