@@ -8,6 +8,11 @@ ul.directory-structure {
     line-height: 2;
     list-style-type: none;
     padding-left: 30px;
+
+    ul {
+      padding-left: 0;
+      border-top: 1px solid $dark-color-4;
+    }
   }
 
   li:last-child {
