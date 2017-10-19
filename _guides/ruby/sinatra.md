@@ -67,13 +67,13 @@ To start a Sinatra application we invoke: `bundle exec rackup`.
 When executing that, `rackup` will automatically look for the file `config.ru` as it is the default when no arguments are given.
 It will then print logging information similar to the following:
 
-{% highlight shell %}
+```
 $: bundle exec rackup
 [2017-07-13 07:20:01] INFO  WEBrick 1.3.1
 [2017-07-13 07:20:01] INFO  ruby 2.3.1 (2016-04-26) [x86_64-linux]
 [2017-07-13 07:20:01] INFO  WEBrick::HTTPServer#start: pid=26153 port=9292
 ...
-{% endhighlight %}
+```
 
 This shows that the application is running and listening on port `9292`.
 The host and port can also be configured via `--host` and `--port` arguments respectively.
@@ -85,9 +85,9 @@ Using a browser to navigate to `http://localhost:9292` will then show the exampl
 
 To run all tests with RSpec we execute:
 
-{% highlight shell %}
+```
 bundle exec rspec
-{% endhighlight %}
+```
 
 This will execute the unit tests for all classes inside the `lib` directory as well as tests that exercise the actual Sinatra application.
 
