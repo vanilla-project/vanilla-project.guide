@@ -147,3 +147,57 @@ php -S localhost:8000
 Then open your browser at `http://localhost:8000/example.php`
 
 You should see the text &ldquo;Good Morning Ada Lovelace&rdquo; being printed (or similar depending on the time of day).
+
+
+## Publishing a PHP Package to Packagist
+
+When `composer require author/package-name` is run, `composer` will retrieve the package data from [Packagist](https://packagist.org/).
+
+To publish your own package to Packagist you should go to [packagist.org/packages/submit](https://packagist.org/packages/submit) and enter the URL of your Git repository, then click _check_.
+
+Once the checking phase has passed you can click _submit_ and your PHP package will be on Packagist.
+
+You can then require your package in any PHP project by running:
+
+```
+composer require your-packagist-username/your-project-name
+```
+
+### Configuring Packagist as a Service
+
+When you update your git repository you will likely want your Packagist package to be updated also.
+
+For GitHub you can do the following:
+
+- Retrieve your API token from Packagist from the _Settings_ on Packagist;
+- Open the settings of your repository on GitHub;
+- Select "Webhooks & Services";
+- Click on _Add Service_ and choose _Packagist_;
+- Input your password when prompted;
+- Paste the Packagist API token into the field on GitHub
+
+When these settings are saved, updates on GitHub will be detected by Packagist.
+
+#### Package Versions
+
+Packages can have versions. When releasing a change you may want this to be versioned so users of your package will not be hit by breaking changes. By tagging a release on Git you can have that tag appear alongside your package on Packagist / Composer.
+
+Use:
+```
+git tag <version>
+```
+
+Eg.:
+```
+git tag 1.0.0
+```
+
+```
+git push origin 1.0.0
+```
+
+Your package will now have a version, and a specific version can be required:
+
+```
+composer require your-packagist-username/your-project-name:1.0.0
+```
