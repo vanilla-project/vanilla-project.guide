@@ -1,5 +1,5 @@
 ---
-title: PHP Package
+title: Package
 date: 2017-08-13
 tags:
   - composer
@@ -24,7 +24,7 @@ PHP originally stood for &ldquo;Personal Home Page&rdquo;, but now stands for &l
 
 PHP packages were traditionally installed via PEAR (PHP Extension and Application Repository), but more recently the standard package and dependency management tool is Composer.
 
-Composer lets us run install commands to add packages to our system, for example `composer require phpunit` would add the unit testing framework PHPUnit to our system. 
+Composer lets us run install commands to add packages to our system, for example `composer require phpunit` would add the unit testing framework PHPUnit to our system.
 
 For instructions on how to install Composer visit [getcomposer.org](https://getcomposer.org/download/).
 
@@ -37,7 +37,7 @@ We can list our dependencies in a `composer.json` file and run `composer install
 
 An example `composer.json` file looks like this:
 
-{% highlight php %}
+{% highlight json %}
 {
     "name": "example-project",
     "require": {
@@ -48,7 +48,7 @@ An example `composer.json` file looks like this:
     }
 }
 {% endhighlight %}
- 
+
 The "require" block tells Composer that the Twig templating package is required for production use and can install Twig with a version of 2.x.x (ie. up to, but not including, version 3).
 
 The "require-dev" block tells Composer that PHPUnit is required in development, but not in production.
@@ -79,7 +79,7 @@ There are a number of testing tools available for PHP. The most popular one is [
 
 [Behat](http://behat.org/en/latest/) is the most popular behaviour-driven development (BDD) testing framework.
 
-[Codeception](http://codeception.com/) is a framework combining BDD, unit testing, and integration testing, and is cross-compatible with PHPUnit. 
+[Codeception](http://codeception.com/) is a framework combining BDD, unit testing, and integration testing, and is cross-compatible with PHPUnit.
 
 In our guides we will be using PHPUnit as the default testing framework.
 
@@ -89,7 +89,7 @@ A typical directory structure for a PHP project consists of a `src` directory th
 
 Another common convention is having a `bin` directory that may contain executable files to start your application.
 
-We provided a working example of a minimal project on [Github](provide URL here).
+We provided a working example of a minimal project on [Github](https://github.com/vanilla-project/php-package).
 <ul class="directory-structure">
   <li class="directory">src</li>
   <li class="directory">test</li>
@@ -103,7 +103,7 @@ We provided a working example of a minimal project on [Github](provide URL here)
 
 Directory names are in lower case. Class and interface files should be in upper case and match the class or interface names.
 Configuration, routes, and publically accessible files should be in lower case.
- 
+
 For example the class `Vanilla` should be contained in file `Vanilla.php`, the publically accessible route to the application should be `index.php`.
 
 Tests match their production code file names with a `Test` suffix, e.g. tests for code in `src/Vanilla.php` should be written in `test/VanillaTest.php`.

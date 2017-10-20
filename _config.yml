@@ -11,9 +11,11 @@ host: 0.0.0.0
 show_dir_listing: false
 
 markdown: kramdown
-gems:
+plugins:
   - jekyll-feed
+  - github-pages
 exclude:
+  - heroku
   - vendor
   - contributing.md
   - Gemfile
@@ -25,6 +27,7 @@ permalink: pretty
 collections:
   guides:
     output: true
+    permalink: /:path/
 
 defaults:
   - scope:
@@ -58,4 +61,14 @@ defaults:
       paradigms:
         - object-oriented
         - dynamically-typed
-      color: "#8b5af1"
+      color: "#4F5D95"
+  - scope:
+      path: "_guides/java"
+    values:
+      language: Java
+      icon: "java.png"
+      paradigms:
+        - object-oriented
+        - statically-typed
+      color: "#F89820"
+
