@@ -109,13 +109,11 @@ For example the class `Vanilla` should be contained in file `Vanilla.php`, the p
 Tests match their production code file names with a `Test` suffix, e.g. tests for code in `src/Vanilla.php` should be written in `test/VanillaTest.php`.
 
 
-
 ## Example Project
-
 
 The repository for the example applications is available at [github.com/vanilla-project/php-package](https://github.com/vanilla-project/php-package).
 
-The main application consists of basically three files:
+The main application consists of basically two files:
 
 - `public/example.php` is the main executable that instantiates and runs:
   - `src/Example/Greeting.php` contains the main application.
