@@ -6,11 +6,7 @@ tags:
   - Maven
 ---
 
-Java is a general-purpose programming language introduced little over 20 years ago.
-It has become widely popular in the enterprise space due to the Java Virtual Machine, the Garbage Collector, a similar programming model to C/C++ and the promise of easier-to-write programs than its competitors of the time.
-
-It is statically typed, notorious for a proliferation of `null`, and relies on polymorphism for clever solutions to problems.
-Since Java 8, more and more functional programming elements have found their way into the language, such as `Stream` and `Optional<T>`, making a resurgence since the more traditional Java 6 and 7 releases.
+{% include_relative overview.md %} 
 
 
 ## Further Material
@@ -93,30 +89,7 @@ With Java this is a manual process.
 
 ### Testing Tools
 
-The standard testing framework is called [JUnit](http://junit.org).
-JUnit is primarily a runner for our tests, and it comes with it's own matchers like `assertEquals`, `assertTrue`, etc.
-There are alternatives to that, which provide a more fluent way to express expectations of a test.
-
-One other matcher library is [Hamcrest](http://hamcrest.org).
-It supports exepectations in the style of
-
-{% highlight java %}
-assertThat(a, is(equalTo(b)));
-{% endhighlight %}
-
-compared to the more traditional JUnit style
-
-{% highlight java %}
-assertEquals(a, b);
-{% endhighlight %}
-
-Another one is AssertJ, which allows expectations in the style of
-
-{% highlight java %}
-assertThat(a).isEqualTo(b);
-{% endhighlight %}
-
-JUnit itself comes with Hamcrest bundled automatically, so in this guide and the example application we will be using Hamcrest style assertions.
+{% include_relative testing.md %}
 
 
 ## Directory Structure
@@ -146,15 +119,7 @@ Packages are Java's way to give classes that belong together a namespace.
 
 ### Naming Conventions
 
-Package names are in lower case.
-
-File names of classes reflect the class name including the capital first letter.
-For example the class `Vanilla` needs to be contained in file `Vanilla.java`.
-
-Tests match their production code file names with a `Test` suffix, e.g. tests for code in `Vanilla.java` should be written in `VanillaTest.java`.
-
-They also match their production package, so that class `com.vanilla_project.Vanilla` will have its tests in `com.vanilla_project.VanillaTest`.
-While the package names match, the physical location does not (as they're separated by `src/main` and `src/test`).
+{% include_relative naming.md %}
 
 
 ## Example Project
