@@ -109,7 +109,7 @@ Tests match their production code file names with a `Test` suffix, e.g. tests fo
 
 The repository for the example applications is available at [github.com/vanilla-project/php-command-line](https://github.com/vanilla-project/php-command-line).
 
-The main application consists of basically three files:
+The main application consists of basically two files:
 
 - `bin/hello.php` is the main executable that instantiates and runs:
   - `src/Example/Greeting.php` contains the main application.
