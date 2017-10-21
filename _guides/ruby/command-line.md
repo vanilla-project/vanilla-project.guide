@@ -26,7 +26,7 @@ Its strength is in its almost English sentence reading syntax as well as its fle
 A typical directory structure for a ruby command line project consists of a `lib` directory that contains all source files and a `spec` directory that includes all tests.
 Another common convention is having a `bin` directory that may contain executable files to start your application.
 
-We provided a working example of a minimal project on [Github](provide URL here).
+We provided a working example of a minimal project on [Github](https://github.com/vanilla-project/ruby-command-line).
 
 <ul class="directory-structure">
   <li class="directory">lib</li>
@@ -68,7 +68,7 @@ Ruby Example
 
 ### Running the Tests
 
-To run the tests we execute `bundle exec rspec` which then looks for all files inside directory `rspec` and runs them.
+To run the tests we execute `bundle exec rspec` which then looks for all files inside directory `spec` and runs them.
 The output should look like the following:
 
 ```
@@ -78,6 +78,7 @@ $: bundle exec rspec
 Finished in 0.00469 seconds (files took 0.07548 seconds to load)
 2 examples, 0 failures
 ```
+
 
 #### Testing Approach
 

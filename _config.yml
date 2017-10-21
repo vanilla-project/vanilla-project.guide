@@ -62,3 +62,13 @@ defaults:
         - object-oriented
         - dynamically-typed
       color: "#4F5D95"
+  - scope:
+      path: "_guides/java"
+    values:
+      language: Java
+      icon: "java.png"
+      paradigms:
+        - object-oriented
+        - statically-typed
+      color: "#F89820"
+
