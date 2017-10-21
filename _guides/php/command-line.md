@@ -115,6 +115,30 @@ The main application consists of basically two files:
   - `src/Example/Greeting.php` contains the main application.
 
 
+### Input
+
+In PHP to use the standard input (STDIN) of the command-line we use the reserved variable `$argv` which contains an array of the script name and any arguments following that. Eg.:
+
+```
+php bin/hello.php "arg1" "arg2" "arg3"
+```
+
+`var_dump($argv)` would return:
+
+```
+array(4) {
+  [0]=>
+  string(10) "hello.php"
+  [1]=>
+  string(4) "arg1"
+  [2]=>
+  string(4) "arg2"
+  [3]=>
+  string(4) "arg3"
+}
+```
+
+
 ### Running the Tests
 
 All tests can be run by executing
@@ -128,7 +152,7 @@ vendor/phpunit/phpunit/phpunit
 
 #### Testing Approach
 
-The test for class `Greeting` is only verifying the return value of one method.
+The test for class `Greeting` is only verifying the return value of one method. 
 
 
 ### Running the Application
