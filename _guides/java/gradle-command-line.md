@@ -1,11 +1,9 @@
 ---
-title: Java Command Line
+title: Gradle Command Line Application
 date: 2017-10-14
 ---
 
-_Java is a general-purpose programming language introduce little over 20 years ago. It has become widely popular in the enterprise space due to the Java Virtual Machine, the Garbage Collector, a similar programming model to C/C++ but the promise of easier-to-write programms than its competitors of the time_
-
-_It is statically typed, notorious for a proliferation of `null`, and relies on polymorphism for clever solutions to problems. Since Java 8, more and more functional programming elements have found their way into the languge, such as `Stream` and `Optional<T>`, makring a resurgance since the more traditional Java 6 and 7 releases._  
+{% include_relative overview.md %} 
 
 ## Further Material
 
@@ -17,7 +15,15 @@ _It is statically typed, notorious for a proliferation of `null`, and relies on 
 
 ## Topics, Tools and Terms
 
-_Explain some general terminology that's being used in the community here._
+Java packages are distributed in _jars_ (from _**J**ava **ar**chive_).
+The central repository to download these jars from is [Maven central](https://search.maven.org).
+
+The Java Virtual Machine (short: JVM) is the platform all Java programs run on.
+It allows Java code to be operating system agnostic, meaning that a Java program written on MacOS can be compiled and run on Windows without modification.
+
+Gradle is not just a tool for build or dependency management, it supports the whole life-cycle for Java projects.
+That includes compiling, testing, packaging, releasing and deploying a project.
+Gradle can be expanded with custom tasks for specific needs of the project. You can find out more about writing tasks in the [official documentation](https://docs.gradle.org/current/userguide/more_about_tasks.html)
 
 
 ### Dependency Management
@@ -26,8 +32,6 @@ Java dependencies are called _jars_.
 There multiple established tools (_Maven, Ivy, Gradle, sbt_) to declare and manage Java dependencies.
 These tend to come bundled with some kind of task execution framework.
 In this guide we will focus on _Gradle_ to maintain our Java projects, though we will lean heavily on standard and practices inspired by _Maven_.
-
-// TODO: Install gradle?
 
 Start out by creating an initial scaffolding with `gradle init --type java-application`.
 This will create the basic files and folder that form the core structuer of a _Gradle_ application.
@@ -78,57 +82,97 @@ There are more configurations such as `runtime` and `testRuntime` that are used 
 
 ### Version Managers
 
-None that I have used myself and can thus recommend.
+Version managers allow us to quickly switch between different language versions.
+There's no support to automatically install new versions, though.
+With Java this is a manual process.
 
 
 ### Testing Tools
 
-// JUnit and Hamcrest 
+{% include_relative testing.md %}
 
 
 ## Directory Structure
 
-_Every language has either an expected layout or at least the community agreed on a common way to organize projects._
+The directory structure for a Gradle project using the `maven` plugin consists of a `src` directory that has two sub-directories:
+1. `main` for the production code.
+2. `test` for the tests.
+
+Inside each of those it's possible to have a `resources` directory to contain general assets for the project like images or configuration files.
+
+We provided a working example of a minimal project on [Github](https://github.com/vanilla-project/java-gradle-command-line).
 
 <ul class="directory-structure">
-  <li class="directory">src</li>
-  <li class="directory">test</li>
-  <li class="file">main.file</li>
+  <li class="directory">
+    src
+    <ul>
+      <li class="directory">main<ul><li class="directory">java</li></ul></li>
+      <li class="directory">test<ul><li class="directory">java</li></ul></li>
+    </ul>
+  </li>
+  <li class="ruby file">build.gradle</li>
 </ul>
+
+Every subdirectory inside each `java` directory forms a [package](https://en.wikipedia.org/wiki/Java_package).
+Packages are Java's way to give classes that belong together a namespace.
 
 
 ### Naming Conventions
 
-_It helps explaining the conventions for file and directory names (e.g. do the tests live in `test`, `tests`, `spec`, &hellip;?)._
-
-
-## Tests
-
-_If applicable for the given language and project type we should also explain different testing strategies._
-_Like approaches to unit-, controller-, integration- and acceptance-testing._
-
-_This does not always apply, so feel free to remove that subchapter if that is the case._
-_For example if the guide is about a command-line program, explaining how to test controllers isn't really possible._
-_Whereas if the guide focusses on a web-framework in a given language, it might be worthwhile explaining a controler- and acceptance-testing approach._
+{% include_relative naming.md %}
 
 
 ## Example Project
 
-_Every guide should come with an example repository that has working code to demonstrate a basic setup._
-_Ideally there's a simple unit test available as well to demonstrate how to test with the language._
+The repository for the example application is available at [github.com/vanilla-project/java-gradle-command-line](https://github.com/vanilla-project/java-gradle-command-line).
+
+The main application consists of basically three files:
+
+- `Main.java` is the main executable that instantiates and runs:
+  - `App.java` contains the main application that uses:
+    - `Example.java` which contains only one method that returns a string.
 
 
 ### Running the Application
 
-_Provide instructions to run the actual application._
+To run the application we need to build it first.
+
+This can be done by executing the `jar` task of gradle
+
+{% highlight shell %}
+gradle jar
+{% endhighlight %}
+
+This will download all dependencies, compile the code, run the tests and _package_ it up into a `.jar` file.
+
+We can then execute the jar file to run our application:
+
+{% highlight shell %}
+java -jar ./build/libs/java-gradle-command-line.jar
+{% endhighlight %}
 
 
 ### Running the Tests
 
-_Show how to run the tests and if needed explain how different moving parts fit together._
+To run the tests we execute `gradle test` which then looks for all files inside directory `src/test` and runs them.
+The output should look like the following:
+
+```
+$: gradle test
+BUILD SUCCESSFUL in 0s
+3 actionable tasks: 3 up-to-date
+```
 
 
 #### Testing Approach
 
-_Different testing strategies can be explained, too!_
+The test for class `Example` is only verifying the return value of one method.
+
+`App` on the other hand is tested via a test-double that gets injected.
+This allows us to _spy_ on the output of it.
+We want to avoid printing anything to the screen while running the tests.
+Injecting a test double in this instance is a nice way to isolate our application from the command line.
+
+In the actual `Main` class we then inject `System.out`, which is Java's standard output stream.
+
 
