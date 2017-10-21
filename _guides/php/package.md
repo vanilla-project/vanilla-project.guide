@@ -1,10 +1,6 @@
 ---
 title: Package
 date: 2017-08-13
-tags:
-  - composer
-  - package
-  - packagist
 ---
 
 PHP is a general-purpose server-side scripting language primarily used in web development. Originally created by Rasmus Lerdorf in 1994, it is now by The PHP Development Team.
