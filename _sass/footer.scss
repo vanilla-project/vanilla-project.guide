@@ -1,9 +1,15 @@
-footer {
+.footer {
   border-top: 1px solid $dark-color-4;
   padding-top: 1rem;
+}
 
-  p {
-    margin-bottom: .5rem;
-  }
+.footer__text {
+  margin-bottom: .5rem;
+}
+
+.footer__copyright {
+  font-size: .7rem;
+  margin-bottom: 0;
+  text-align: center;
 }
 
