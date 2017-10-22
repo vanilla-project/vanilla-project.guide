@@ -1,0 +1,23 @@
+{% include search.html %}
+
+<script>
+  var renderResult = function(searchedTags) {
+    var routes = [];
+    var resultsProps = {};
+
+    routes = findGuidesForTags(searchedTags, guides);
+
+    if (searchedTags.length !== 0) {
+      resultsProps = {
+        results: buildResultsForRoutes(routes)
+      };
+    }
+
+    var results = h(SearchResults, resultsProps);
+
+    preactRoot = preact.render(results, resultsContainer, preactRoot);
+  };
+
+  renderResult([]);
+</script>
+

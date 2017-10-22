@@ -3,7 +3,7 @@ layout: default
 title: Guides
 ---
 
-{% include search.html %}
+{% include search-for-guides.html %}
 
 <h1>All Available Guides</h1>
 

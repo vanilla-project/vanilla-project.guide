@@ -21,18 +21,6 @@ var findGuidesForTags = function(tags, guides) {
   return found;
 };
 
-var allRoutesOf = function(guides) {
-  var routes = [];
-
-  for (var route in guides) {
-    if (guides.hasOwnProperty(route)) {
-      routes.push(route);
-    }
-  }
-
-  return routes;
-};
-
 var capitalize = function(string) {
   var words = string.split("-");
   var capitalizedWords = [];
