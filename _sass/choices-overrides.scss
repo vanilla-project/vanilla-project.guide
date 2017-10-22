@@ -1,3 +1,7 @@
+input.choices__input {
+  font-size: 16px; // to prevent iOS' automatic zoom when tapping into an input field
+}
+
 .choices[data-type*=select-multiple] .choices__button, .choices[data-type*=text] .choices__button {
   background-image: url(icons/cross.svg);
   border-left: 1px solid $dark-color-3;
