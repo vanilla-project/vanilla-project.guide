@@ -1,20 +1,11 @@
-<section class="available-guides">
-
-  {% assign languages = "" | split: "" %}
+<ul class="guides">
   {% for guide in site.guides %}
-    {% assign languages = languages | push: guide.language | uniq %}
+  <li class="guides__guide">
+    <a href="{{ guide.url | relative_url }}" class="guides__link">
+      <img src="{{ "/assets/icons/" | relative_url }}{{ guide.icon}}" class="guides__image"/>
+      {{ guide.language | escape }} {{ guide.title | escape }}
+    </a>
+  </li>
   {% endfor %}
+</ul>
 
-  {% for language in languages %}
-    <article>
-      <h2>{{ language }}</h2>
-      <ul>
-        {% for guide in site.guides %}
-          {% if guide.language == language %}
-            <li><a href="{{ guide.url | relative_url }}">{{ guide.title | escape }}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </article>
-  {% endfor %}
-</section>

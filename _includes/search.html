@@ -1,5 +1,5 @@
 <select id="search" multiple=""></select>
-<article id="search-results"></article>
+<div id="search-results"></div>
 
 <script rel="stylesheet" src="{{ "/assets/preact.min.js" | relative_url }}"></script>
 <script rel="stylesheet" src="{{ "/assets/choices.min.js" | relative_url }}"></script>
@@ -71,17 +71,19 @@ var resultsContainer = document.getElementById("search-results");
 var choices          = new Choices(input, options);
 
 var SearchResults = function(props) {
-  var guides = findGuidesForTags(props.searchedTags, props.guides);
+  var routes = [];
   var results = [];
 
   if (props.searchedTags.length === 0) {
-    return;
+    routes = allRoutesOf(guides);
+  } else {
+    routes = findGuidesForTags(props.searchedTags, props.guides);
   }
 
-  for (var i = 0; i < guides.length; i++) {
-    var g = routeToLanguageAndTitle[guides[i]];
+  for (var i = 0; i < routes.length; i++) {
+    var g = routeToLanguageAndTitle[routes[i]];
     var props = {
-      route: guides[i],
+      route: routes[i],
       language: g.language,
       title: g.title,
       icon: g.icon
@@ -96,13 +98,13 @@ var SearchResults = function(props) {
     return h("p", null, "No guides found.", br, "Are we missing something? Please ", link, ".");
   }
 
-  return h("ul", null, results);
+  return h("ul", {"class": "guides"}, results);
 };
 
 var SearchResult = function(props) {
-  var icon = h("img", {src: "{{ "/assets/icons/" | relative_url }}" + props.icon});
-  return h("li", {key: props.route},
-      h("a", {href: props.route}, icon, props.language + " " + props.title)
+  var icon = h("img", {src: "{{ "/assets/icons/" | relative_url }}" + props.icon, "class": "guides__image"});
+  return h("li", {key: props.route, "class": "guides__guide"},
+      h("a", {href: props.route, "class": "guides__link"}, icon, props.language + " " + props.title)
     );
 };
 
