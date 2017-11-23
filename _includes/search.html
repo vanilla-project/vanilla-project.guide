@@ -1,15 +1,9 @@
----
-layout: default
-title: Search
----
-<h1>{{ page.title }}</h1>
-
-<select id="search" placeholder="This is a placeholder" multiple=""></select>
-
-<article id="search-results"></article>
+<select id="search" multiple=""></select>
+<div id="search-results"></div>
 
 <script rel="stylesheet" src="{{ "/assets/preact.min.js" | relative_url }}"></script>
 <script rel="stylesheet" src="{{ "/assets/choices.min.js" | relative_url }}"></script>
+<script rel="stylesheet" src="{{ "/assets/search-components.js" | relative_url }}"></script>
 <script rel="stylesheet" src="{{ "/assets/search.js" | relative_url }}"></script>
 
 <script>
@@ -66,7 +60,7 @@ var options = {
   searchFloor: 1,
   duplicateItems: false,
   placeholder: true,
-  placeholderValue: "Start searching for project flavours...",
+  placeholderValue: "Start searching for flavours...",
   removeItemButton: true
 };
 
@@ -77,49 +71,22 @@ var input            = document.getElementById("search");
 var resultsContainer = document.getElementById("search-results");
 var choices          = new Choices(input, options);
 
-var SearchResults = function(props) {
-  var guides = findGuidesForTags(props.searchedTags, props.guides);
+var buildResultsForRoutes = function(routes) {
   var results = [];
 
-  if (props.searchedTags.length === 0) {
-    return;
-  }
-
-  for (var i = 0; i < guides.length; i++) {
-    var g = routeToLanguageAndTitle[guides[i]];
+  for (var i = 0; i < routes.length; i++) {
+    var g = routeToLanguageAndTitle[routes[i]];
     var props = {
-      route: guides[i],
+      route: routes[i],
       language: g.language,
       title: g.title,
       icon: g.icon
     };
+
     results.push(h(SearchResult, props));
   }
 
-  if (results.length === 0) {
-    var link = h("a", {href: "https://github.com/vanilla-project/vanilla-project.github.io/issues/new"}, "let us know if you'd like to see a specific guide");
-    var br = h("br");
-
-    return h("p", null, "No guides found.", br, "Are we missing something? Please ", link, ".");
-  }
-
-  return h("ul", null, results);
-};
-
-var SearchResult = function(props) {
-  var icon = h("img", {src: "{{ "/assets/icons/" | relative_url }}" + props.icon});
-  return h("li", {key: props.route},
-      h("a", {href: props.route}, icon, props.language + " " + props.title)
-    );
-};
-
-var renderResult = function(searchedTags) {
-  var resultsProps = {
-    guides: guides,
-    searchedTags: searchedTags
-  };
-
-  preactRoot = preact.render(h(SearchResults, resultsProps), resultsContainer, preactRoot);
+  return results;
 };
 
 input.addEventListener('addItem', function(addEvent) {
@@ -138,7 +105,5 @@ input.addEventListener('removeItem', function(removeEvent) {
 
   renderResult(searchedTags);
 });
-
-renderResult([]);
 </script>
 

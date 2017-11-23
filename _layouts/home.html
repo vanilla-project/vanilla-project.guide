@@ -5,27 +5,7 @@ layout: default
 
   {{ content }}
 
-  {% assign languages = "" | split: "" %}
-  {% for guide in site.guides %}
-    {% assign languages = languages | push: guide.language | uniq %}
-  {% endfor %}
-
-  <section class="available-guides">
-    <h1>Available Guides</h1>
-
-    {% for language in languages %}
-      <article>
-        <h2>{{ language }}</h2>
-        <ul>
-          {% for guide in site.guides %}
-            {% if guide.language == language %}
-              <li><a href="{{ guide.url | relative_url }}">{{ guide.title | escape }}</a></li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </article>
-    {% endfor %}
-  </section>
+  {% include search-for-homepage.html %}
 
   <h1>Latest Updates</h1>
 
