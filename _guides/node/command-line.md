@@ -104,7 +104,7 @@ A typical directory structure for a node.js command line project consists of a `
 Since the community of Node.js users is so large, it is difficult to see a standard in the way apps are structured.
 It is easy to find node command line applications that don't follow the folder structure below.
 
-We provided a working example of a minimal project on [Github](provide URL here).
+We provided a working example of a minimal project on [Github](https://github.com/vanilla-project/node-command-line).
 
 <ul class="directory-structure">
   <li class="directory">src</li>
