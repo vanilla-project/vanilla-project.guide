@@ -52,7 +52,7 @@ _Every language has either an expected layout or at least the community agreed o
 
 ### Naming Conventions
 
-_It helps explaining the conventions for file and directory names (e.g. do the tests live in `test`, `tests`, `spec`, &hellip;?)._
+_It helps explain the conventions for file and directory names (e.g. do the tests live in `test`, `tests`, `spec`, &hellip;?)._
 
 
 ## Tests
@@ -62,7 +62,7 @@ _Like approaches to unit-, controller-, integration- and acceptance-testing._
 
 _This does not always apply, so feel free to remove that subchapter if that is the case._
 _For example if the guide is about a command-line program, explaining how to test controllers isn't really possible._
-_Whereas if the guide focusses on a web-framework in a given language, it might be worthwhile explaining a controler- and acceptance-testing approach._
+_Whereas if the guide focuses on a web-framework in a given language, it might be worthwhile explaining a controller- and acceptance-testing approach._
 
 
 ## Example Project
