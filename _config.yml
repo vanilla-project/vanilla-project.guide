@@ -68,4 +68,13 @@ defaults:
         - object-oriented
         - statically-typed
       color: "#F89820"
+  - scope:
+      path: "_guides/python"
+    values:
+      language: Python
+      icon: python.png
+      paradigms:
+        - object-oriented
+        - dynamically-typed
+      color: "#3572A5"
 
