@@ -1,5 +1,5 @@
 source "https://rubygems.org"
-ruby "2.6.6"
+ruby "2.6.2"
 
 gem "rake", "13.0.1"
 gem "puma", "4.3.3"

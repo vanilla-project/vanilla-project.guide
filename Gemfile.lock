@@ -261,7 +261,7 @@ DEPENDENCIES
   tzinfo-data (= 1.2019.3)
 
 RUBY VERSION
-   ruby 2.6.6p146
+   ruby 2.6.2p47
 
 BUNDLED WITH
    2.1.4
