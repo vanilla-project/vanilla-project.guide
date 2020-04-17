@@ -4,14 +4,10 @@
   "scripts": {
   },
   "env": {
-    "LANG": {
-      "required": true
-    }
   },
   "formation": {
   },
   "addons": [
-
   ],
   "buildpacks": [
     {
