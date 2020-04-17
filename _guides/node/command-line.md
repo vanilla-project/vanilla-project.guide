@@ -15,6 +15,10 @@ Node.js uses an event-driven, non-blocking I/O model that makes it lightweight a
 - Homepage: [nodejs.org](https://nodejs.org/)
 - Documentation: [nodejs.org/api](https://nodejs.org/api)
 
+
+{% include_relative overview.md %}
+
+
 ## Directory Structure
 
 The repository for the example applications is available at [github.com/vanilla-project/node-command-line](https://github.com/vanilla-project/node-command-line).
@@ -33,7 +37,7 @@ We provided a working example of a minimal project on [Github](https://github.co
   <li class="json file">package.json</li>
 </ul>
 
-{% include_relative overview.md %}
+
 
 ### Naming Conventions
 
