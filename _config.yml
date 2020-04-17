@@ -13,10 +13,7 @@ show_dir_listing: false
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - github-pages
 exclude:
-  - heroku
-  - vendor
   - contributing.md
   - Gemfile
   - Gemfile.lock
