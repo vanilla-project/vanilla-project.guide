@@ -8,6 +8,10 @@ jobs:
       - checkout
 
       - run:
+          name: Install Bundler
+          command: gem install bundler
+
+      - run:
           name: Setup Heroku
           command: bash .circleci/setup-heroku.sh
 
