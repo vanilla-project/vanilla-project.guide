@@ -1,6 +1,6 @@
 # https://vanilla-project.guide
 
-![Build Status](https://circleci.com/gh/vanilla-project/vanilla-project.github.io/tree/master.svg?style=shield&circle-token=72581d4da0c51739f251af0eeb1569c7e1fd33dd)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a14a6b00-90bd-4f64-8386-4fb82ddcd050/deploy-status)](https://app.netlify.com/sites/vanilla-project/deploys)
 
 This is the repository for https://vanilla-project.guide.
 
