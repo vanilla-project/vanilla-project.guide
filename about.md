@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+{% include logo.html align="right" %}
+
 We found we ask ourselves similar questions every time we want to start a project with a new language:
 
 - _&ldquo;How do I install the language runtime?&rdquo;_
