@@ -160,7 +160,7 @@ rootdir: ~/python-command-line, inifile: pytest.ini
 collected 2 items
 
 tests/test_example.py::TestExample::test_returns_message PASSED
-tests/test_main.py::TestMain::test_bla PASSED
+tests/test_main.py::TestMain::test_prints_example_output PASSED
 
 ================================== 2 passed in 0.02s ==================================
 ```
