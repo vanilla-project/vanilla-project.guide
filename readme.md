@@ -22,7 +22,8 @@ Run `bundle exec jekyll serve` and it will serve the content on http://localhost
 
 ## Deployment
 
-We use GitHub pages for this site, so deploys happen automatically after merging PRs or pushing directly to the `master` branch.
+We use [Netlify](https://www.netlify.com) for this site, so deploys happen automatically after merging PRs or pushing directly to the `master` branch.
+Pull requests will automatically create a preview deployment, so that changes can be viewed in advance, too.
 
 
 ## Built With

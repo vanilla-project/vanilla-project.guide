@@ -11,7 +11,7 @@ var SearchResults = function(props) {
   }
 
   if (props.results.length === 0) {
-    var link = h("a", {href: "https://github.com/vanilla-project/vanilla-project.github.io/issues/new"}, "let us know if you'd like to see a specific guide");
+    var link = h("a", {href: "https://github.com/vanilla-project/vanilla-project.guide/issues/new"}, "let us know if you'd like to see a specific guide");
     var br = h("br");
 
     return h("p", null, "No guides found.", br, "Are we missing something? Please ", link, ".");
