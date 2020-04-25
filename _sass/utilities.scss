@@ -1,0 +1,25 @@
+.text-size-1 { font-size: $text-size-1; }
+.text-size-2 { font-size: $text-size-2; }
+.text-size-3 { font-size: $text-size-3; }
+.text-size-4 { font-size: $text-size-4; }
+.text-size-5 { font-size: $text-size-5; }
+.text-size-6 { font-size: $text-size-6; }
+
+@media (min-width: $desktop-size) {
+  .text-size-1 { font-size: $desktop-text-size-1; }
+  .text-size-2 { font-size: $desktop-text-size-2; }
+  .text-size-3 { font-size: $desktop-text-size-3; }
+  .text-size-4 { font-size: $desktop-text-size-4; }
+  .text-size-5 { font-size: $desktop-text-size-5; }
+  .text-size-6 { font-size: $desktop-text-size-6; }
+}
+
+.bright-color-1 { background-color: $bright-color-1; }
+.bright-color-2 { background-color: $bright-color-2; }
+.bright-color-3 { background-color: $bright-color-3; }
+.bright-color-4 { background-color: $bright-color-4; }
+.dark-color-1 { background-color: $dark-color-1; }
+.dark-color-2 { background-color: $dark-color-2; }
+.dark-color-3 { background-color: $dark-color-3; }
+.dark-color-4 { background-color: $dark-color-4; }
+
