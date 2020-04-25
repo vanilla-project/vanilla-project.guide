@@ -12,7 +12,7 @@
       {% if guide.language == language %}
         <li class="guides__guide">
           <a href="{{ guide.url | relative_url }}" class="guides__link">
-            <img src="{{ "/assets/icons/" | relative_url }}{{ guide.icon}}" class="guides__image"/>
+            <img src="{{ "/assets/icons/" | relative_url }}{{ guide.icon}}" class="guides__image" alt="Logo of {{ guide.language }}" />
             {{ guide.language | escape }} {{ guide.title | escape }}
           </a>
         </li>

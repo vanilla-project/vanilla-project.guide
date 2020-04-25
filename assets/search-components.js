@@ -1,5 +1,5 @@
 var SearchResult = function(props) {
-  var icon = h("img", {src: "/assets/icons/" + props.icon, "class": "guides__image"});
+  var icon = h("img", {src: "/assets/icons/" + props.icon, "class": "guides__image", alt: "Logo of " + props.language});
   return h("li", {key: props.route, "class": "guides__guide"},
       h("a", {href: props.route, "class": "guides__link"}, icon, props.language + " " + props.title)
     );
