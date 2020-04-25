@@ -1,4 +1,6 @@
-# https://vanilla-project.guide
+<img align="right" src="assets/logo-full.png" alt="Vanilla Project Logo" />
+
+# Vanilla Project
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/a14a6b00-90bd-4f64-8386-4fb82ddcd050/deploy-status)](https://app.netlify.com/sites/vanilla-project/deploys)
 

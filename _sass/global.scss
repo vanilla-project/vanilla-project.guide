@@ -31,53 +31,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.3rem;
+  @extend .text-size-6;
 }
 
 h2 {
-  font-size: 2rem;
+  @extend .text-size-5;
 }
 
 h3 {
-  font-size: 1.8rem;
+  @extend .text-size-4;
 }
 
 h4 {
-  font-size: 1.5rem;
+  @extend .text-size-3;
 }
 
 h5 {
-  font-size: 1.1rem;
+  @extend .text-size-2;
 }
 
 h6 {
-  font-size: 1rem;
-}
-
-@media (min-width: $desktop-size) {
-  h1 {
-    font-size: 3rem;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  h3 {
-    font-size: 2.2rem;
-  }
-
-  h4 {
-    font-size: 1.8rem;
-  }
-
-  h5 {
-    font-size: 1.2rem;
-  }
-
-  h6 {
-    font-size: 1rem;
-  }
+  @extend .text-size-1;
 }
 
 table {
@@ -100,7 +74,7 @@ p {
 }
 
 pre, blockquote, dl, figure, table, p, ul, ol, form {
-  margin-bottom: 1.5rem;
+  margin-bottom: $space-medium;
 }
 
 ul > li, li > ul {
@@ -108,11 +82,11 @@ ul > li, li > ul {
 }
 
 ul {
-  padding-left: 1rem;
+  padding-left: $space-standard;
 
   @media (min-width: $desktop-size) {
     & {
-      padding-left: 2rem;
+      padding-left: $space-large;
     }
   }
 }

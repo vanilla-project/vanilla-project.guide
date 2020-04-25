@@ -1,0 +1,18 @@
+.logo {
+  display: block;
+  margin: auto;
+  width: 40vw;
+}
+
+.logo.right {
+  float: right;
+}
+
+@media (min-width: $desktop-size) {
+  .logo {
+    display: block;
+    margin: auto;
+    width: 15vw;
+  }
+}
+
