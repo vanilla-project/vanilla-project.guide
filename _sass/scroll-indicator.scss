@@ -1,0 +1,15 @@
+.scroll-indicator-container {
+  position: fixed !important;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  margin-top: 0 !important;
+}
+
+.scroll-indicator {
+  background: #FFF;
+  height: $scroll-indicator-height;
+  opacity: 40%;
+  width: 0%;
+}
+

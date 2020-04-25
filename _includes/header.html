@@ -1,4 +1,8 @@
-<header class="color-code" {% if page.color %}style="border-color: {{page.color}};"{% endif %}>
+<div class="color-code scroll-indicator-container"{% if page.color %} style="background-color: {{page.color}};"{% endif %}>
+  <div class="scroll-indicator" id="js-scroll-indicator"></div>
+</div>
+
+<header>
   <input class="show-menu" id="show-menu" type="checkbox" />
   <label for="show-menu" class="menu">
     <span></span>

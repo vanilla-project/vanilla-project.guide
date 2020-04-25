@@ -1,0 +1,6 @@
+{% if page.color %}
+  <script type="text/javascript" src="{{ "/assets/scroll-indicator.js" | relative_url }}"></script>
+  <script type="text/javascript">
+    window.onscroll = updateScrollIndicator;
+  </script>
+{% endif %}
