@@ -12,13 +12,13 @@
     <email></email>
   </author>
 
-  {% for post in site.posts %}
+  {% for guide in site.guides %}
   <entry>
-    <title>{{ post.title }}</title>
+    <title>{{ guide.language }} {{ guide.title }}</title>
     <link href="{{site.url}}{{ post.target_url }}"/>
-    <updated>{{ post.date | date_to_xmlschema }}</updated>
-    <id>{{ site.url }}{{ post.target_url }}</id>
-    <content type="html">{{ post.content | xml_escape }}</content>
+    <updated>{{ guide.date | date_to_xmlschema }}</updated>
+    <id>{{ site.url }}{{ guide.url }}</id>
+    <content type="html">{{ guide.content | xml_escape }}</content>
   </entry>
   {% endfor %}
 </feed>

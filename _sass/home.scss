@@ -23,36 +23,9 @@
   line-height: 1.3rem;
 }
 
-ul.latest-updates {
-  padding-left: 0;
-
-  li {
-    list-style-type: none;
-
-    span {
-      display: block;
-      font-size: .8em;
-    }
-
-    h2 {
-      font-size: 1em;
-      display: inline;
-    }
-  }
-}
-
 @media (min-width: $desktop-size) {
   .guides__guide {
     flex: 1 0 50%;
-  }
-
-  ul.latest-updates {
-    li {
-      span {
-        display: inline-block;
-        width: 10%;
-      }
-    }
   }
 }
 
