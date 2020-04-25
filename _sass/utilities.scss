@@ -1,3 +1,19 @@
+.centered {
+  text-align: center;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.small-margin-bottom {
+  margin-bottom: .5rem;
+}
+
 .text-size-1 { font-size: $text-size-1; }
 .text-size-2 { font-size: $text-size-2; }
 .text-size-3 { font-size: $text-size-3; }

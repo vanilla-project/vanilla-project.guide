@@ -2,8 +2,11 @@
 layout: home
 ---
 
-You want to learn a new language? Great!
+<p class="centered text-size-3 text-bold small-margin-bottom">
+  You want to learn a new language? <span class="text-italic">Great!</span>
+</p>
 
-Vanilla-language.guide is there to help you get started!
+<p class="centered text-size-2">
 Our aim is to provide guides in various languages and different tooling to help you get started with a new environment.
+</p>
 
