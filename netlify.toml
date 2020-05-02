@@ -1,0 +1,8 @@
+[build]
+base = "./"
+publish = "_site/"
+command = "jekyll build"
+
+[context.production]
+  command = "JEKYLL_ENV=production jekyll build"
+
