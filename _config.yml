@@ -75,4 +75,12 @@ defaults:
         - object-oriented
         - dynamically-typed
       color: "#3572A5"
+  - scope:
+      path: "_guides/rust"
+    values:
+      language: Rust
+      icon: rust.svg
+      paradigms:
+        - statically-typed
+      color: "#DEA584"
 
