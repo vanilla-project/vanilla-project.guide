@@ -6,7 +6,7 @@ tags:
 ---
 
 Rust is a strongly typed programming language with focus on performance and memory-safety.
-It's been designed at Mozilla Labs in 2010.
+It was designed at Mozilla Labs in 2010.
 
 
 ## Further Material
@@ -24,13 +24,13 @@ It comes with the Rust language distribution itself.
 
 Cargo lets us run commands to build and test projects or install new binaries.
 It does not provide a way via the command line to add a new dependency, though.
+There is, however, a tool available for that: `cargo-edit` (see [`cargo-edit`'s GitHub repository](https://github.com/killercup/cargo-edit)).
 
 
 ### Dependency Management
 
 The way to add new packages to a project is to edit a file called `Cargo.toml` and add the new package(s) in there.
-Whenever the next `cargo build` or `cargo test` is executed, cargo will download any new dependencies then.
-There is, however, a tool available for that: `cargo-edit` (see [`cargo-edit`'s GitHub repository](https://github.com/killercup/cargo-edit)).
+Whenever the next `cargo build` or `cargo test` is executed, cargo will download and compile any new dependencies then.
 
 Cargo uses the file `Cargo.toml` to keep track of required dependencies for a given project (together with `Cargo.lock`).
 An example `Cargo.toml` looks like this:
@@ -54,7 +54,7 @@ See [its website](https://rustup.rs) as well as its [GitHub repository](https://
 
 ### Testing Tools
 
-The Rust programming languages comes with testing support built in.
+The Rust programming language comes with testing support built in.
 It provides some basic helper [macros](https://doc.rust-lang.org/stable/rust-by-example/macros.html) for assertions:
 
 - `assert!(expression)`
@@ -91,7 +91,7 @@ The Cargo Book has [its own chapter about package layout](https://doc.rust-lang.
 
 ### Unit Tests and Integration Tests
 
-One difference that stands out to other languages is that there is no `src`/`test` directory serparation between production code and its unit tests in Rust.
+One difference that stands out to other languages is that there is no `src`/`test` directory separation between production code and its unit tests in Rust.
 Unit tests live _inside_ the modules defined in `src` &mdash; usually towards the bottom of the file.
 It is possible, though, to have a `tests` directory on the root level of our projects.
 Tests in there are considered _integration tests_, that test a wider scope of the project than individual unit tests.
