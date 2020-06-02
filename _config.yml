@@ -34,7 +34,7 @@ defaults:
       path: "_guides/ruby"
     values:
       language: Ruby
-      icon: ruby.png
+      icon: ruby.svg
       paradigms:
         - object-oriented
         - dynamically-typed
@@ -43,7 +43,7 @@ defaults:
       path: "_guides/node"
     values:
       language: JavaScript
-      icon: "js.png"
+      icon: js.svg
       paradigms:
         - object-oriented
         - dynamically-typed
@@ -52,7 +52,7 @@ defaults:
       path: "_guides/php"
     values:
       language: PHP
-      icon: "php.png"
+      icon: php.svg
       paradigms:
         - object-oriented
         - dynamically-typed
@@ -61,7 +61,7 @@ defaults:
       path: "_guides/java"
     values:
       language: Java
-      icon: "java.png"
+      icon: java.svg
       paradigms:
         - object-oriented
         - statically-typed
@@ -70,7 +70,7 @@ defaults:
       path: "_guides/python"
     values:
       language: Python
-      icon: python.png
+      icon: python.svg
       paradigms:
         - object-oriented
         - dynamically-typed
