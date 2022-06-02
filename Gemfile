@@ -1,7 +1,8 @@
 source "https://rubygems.org"
-ruby "2.6.2"
+ruby "3.1.2"
 
 gem "jekyll", "4.2.2"
+gem "webrick", "1.7.0"
 
 group :jekyll_plugins do
    gem "jekyll-feed", "0.15.1"
